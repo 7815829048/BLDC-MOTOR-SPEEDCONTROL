@@ -1,11 +1,11 @@
-#  ⭐Speed Control of BLDC Motor using 6-Step Method
+#  Speed Control of BLDC Motor using 6-Step Method
 
-## 📁Overview
+## Project Overview
 This project implements speed control of a Brushless DC (BLDC) motor using an STM32 microcontroller with the **6-step (trapezoidal) commutation method**. 
 Hall-effect sensors provide rotor position feedback, and PWM signals control the MOSFET inverter for precise motor control.
 
 
-## ⚒️Hardware Requirements
+## Hardware Requirements
 - STM32F103C8T6
 - 3-phase BLDC motor(24V BLDC 4 pole motor max RPM-3000)
 - MOSFET-based inverter or gate driver
@@ -13,11 +13,8 @@ Hall-effect sensors provide rotor position feedback, and PWM signals control the
 -  potentiometer for speed reference
 -  16×2 LCD with I²C module (PCF8574/PCF8574A)
 
-## 💠Schematic diagram
-![BLDC SCHEMATIC](SCHEMATIC.png)
 
-
-## 💠Pin Configuration
+## Pin Configuration
 | STM32 Pin | Function           |
 |-----------|------------------|
 | PA0       | Hall Sensor A     |
@@ -34,7 +31,7 @@ Hall-effect sensors provide rotor position feedback, and PWM signals control the
 | PB11      | I²C SDA           |
 
 
-## 💠How the Project Works
+## How this Project Works
 
 The project controls the speed of a BLDC motor using the **6-step (trapezoidal) commutation method** based on Hall-effect sensor feedback.
 
@@ -79,7 +76,7 @@ The project controls the speed of a BLDC motor using the **6-step (trapezoidal) 
    - Updates PWM via PID control  
    - ensuring stable and smooth motor operation.
 
-##  💠Note
+##  Note
 - For identifing hall reading for each sector , power any tw0 phase directly with 30% rated voltage , let rortor settle for two sencods , and take hall sensor reading, repeated this procces for othe phase combinations too.
 - refer ti refernece
 - refer BLDC 6 step commutation pdf
